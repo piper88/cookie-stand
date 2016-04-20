@@ -12,7 +12,7 @@ function Store(name, min, max, averageCookies) {
   this.calculateHourlyCustomer = function (min, max) {
     for (var i = 0; i < timeArray.length - 1; i++) {
       this.arrayOfCustomersPerHour.push(Math.floor(Math.random() * (max - min + 1) + min));
-    };
+    };//calculateHourlyCustomer
   };
   this.calculateHourlySales = function () {
     this.calculateHourlyCustomer(this.min, this.max);
@@ -21,7 +21,7 @@ function Store(name, min, max, averageCookies) {
       this.dailyTotal += this.arrayOfHourlySales[i];
     };
   };
-  console.log(this.dailyTotal);
+  console.log('dailyTotal' + this.dailyTotal);
 
   this.calculateHourlySales();
   allStores.push(this);
@@ -41,7 +41,8 @@ function Store(name, min, max, averageCookies) {
     parentEl.appendChild(tr);
   };
   this.renderStore();
-};
+};// End of store construct.
+
 function headerRow () {
   // var tr = document.createElement('tr');
   var parentEl = document.getElementById('dataTable');
@@ -55,7 +56,24 @@ function headerRow () {
   parentEl.appendChild(th);
 };
 
+function handleFormSubmit (event) {
+  console.log(event);
+  event.preventDefault();
+  var location = event.target.location.value;
+  var minimum = event.target.min.value;
+  var maximum = event.target.max.value;
+  var averageCookies = event.target.average.value;
+  var newStore = new Store (location,minimum,maximum,averageCookies);
+  event.target.location.value = null;
+  event.target.min.value = null;
+  event.target.max.value = null;
+  event.target.average.value = null;
+}
+
+var newform = document.getElementById('newform');
+newform.addEventListener('submit', handleFormSubmit);
 headerRow ();
+console.log(newform);
 var pike = new Store('PikePlace',17,88,5.2);
 var seaTac = new Store('SeaTac',6,24,1.2);
 var southCenter = new Store('SountCenter',11 ,38,1.9);
