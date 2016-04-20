@@ -61,18 +61,3 @@ var seaTac = new Store('SeaTac',6,24,1.2);
 var southCenter = new Store('SountCenter',11 ,38,1.9);
 var bellSquare = new Store ('BellSquare',20,48,3.3);
 var alki = new Store ('Alki',3,24,2.6);
-
-//second method takes in the array from the first method, and multiplies it by the average cookies per customer, and returns another array that has cookies per hour consumed.
-
-// function renderToPage (arraySales) {
-// this.calculateHourlySales();
-//   var parentEl = document.getElementById('alki'); //could have outside of for loop
-//   for (var i = 0; i < this.arrayOfHourlySales.length; i++) {
-//     var listEl = document.createElement('li');
-//     listEl.textContent = this.timeArray[i] + this.arrayOfHourlySales[i] + ' cookies';
-//     parentEl.appendChild(listEl);
-//   }; //end of for loop
-//   var totalEl = document.createElement('li');
-//   totalEl.textContent = 'Total: ' + this.dailyTotal + ' cookies';
-//   parentEl.appendChild(totalEl);
-// } //end of rendertoPage method
