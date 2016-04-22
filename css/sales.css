@@ -1,0 +1,29 @@
+#form-legend {
+  text-align: center;
+  color: rgb(39, 25, 115);
+  font-size: 25px;
+  padding: 10px;
+}
+
+#dataTable {
+  border: 2px solid;
+  margin: 20px auto 0 auto;
+}
+
+td {
+  padding: 5px;
+  font-family: Arial;
+}
+
+th {
+  font-family: Arial;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: rgb(39, 25, 115);
+  text-align: center;
+  font-size: 20px;
+  margin-top: 20px;
+}

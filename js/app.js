@@ -1,4 +1,4 @@
-var timeArray = ['Location ', '6am: ', '7am: ', '8am: ', '9am: ', '10am: ', '11am: ', '12pm: ', '1pm: ', '2pm: ', '3pm: ', '4pm: ', '5pm: ', '6pm: ', '7pm: ', '8pm: '];
+var timeArray = ['Location ', '6am ', '7am ', '8am ', '9am ', '10am ', '11am ', '12pm ', '1pm ', '2pm ', '3pm ', '4pm ', '5pm ', '6pm ', '7pm ', '8pm '];
 var allStores = [];
 
 function Store(name, min, max, averageCookies) {
@@ -13,6 +13,7 @@ function Store(name, min, max, averageCookies) {
     for (var i = 0; i < timeArray.length - 1; i++) {
       this.arrayOfCustomersPerHour.push(Math.floor(Math.random() * (max - min + 1) + min));
     };//calculateHourlyCustomer
+    console.log(this.arrayOfCustomersPerHour);
   };
   this.calculateHourlySales = function () {
     this.calculateHourlyCustomer(this.min, this.max);
@@ -76,6 +77,6 @@ headerRow ();
 console.log(newform);
 var pike = new Store('PikePlace',17,88,5.2);
 var seaTac = new Store('SeaTac',6,24,1.2);
-var southCenter = new Store('SountCenter',11 ,38,1.9);
+var southCenter = new Store('SouthCenter',11 ,38,1.9);
 var bellSquare = new Store ('BellSquare',20,48,3.3);
 var alki = new Store ('Alki',3,24,2.6);
