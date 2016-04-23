@@ -1,0 +1,33 @@
+body {
+  background-color: #ffa07a;
+}
+
+.nav {
+  background-color: #f97743;
+  margin-top: 20px;
+}
+
+.nav-links {
+  text-decoration: none;
+  font-size: 28px;
+  font-family: 'Roboto', sans-serif;
+  color: black;
+  text-align: center;
+  display: block;
+}
+
+.title {
+  text-align: center;
+  font-family: sans-serif;
+  color: #a74c27;
+}
+
+img {
+  display: block;
+  margin: auto;
+}
+
+h4 {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
