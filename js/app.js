@@ -9,6 +9,7 @@ function Store(name, min, max, averageCookies) {
   this.arrayOfCustomersPerHour = [];
   this.arrayOfHourlySales = [];
   this.dailyTotal = 0;
+
   this.calculateHourlyCustomer = function (min, max) {
     for (var i = 0; i < timeArray.length - 1; i++) {
       this.arrayOfCustomersPerHour.push(Math.floor(Math.random() * (max - min + 1) + min));
